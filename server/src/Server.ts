@@ -6,4 +6,5 @@ const bootstrap = new Bootstrap(app)
 
 bootstrap.addRouting();
 bootstrap.addMiddleware();
+bootstrap.addSockets();
 bootstrap.startup(3000);
