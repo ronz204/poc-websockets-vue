@@ -4,7 +4,7 @@ import { Server } from "socket.io";
 
 import type { Express } from "express";
 import { PingRouter } from "@Routers/PingRouter";
-import { SocketBinder } from "@Sockets/SocketBinder";
+import { PingSocket } from "@Sockets/PingSocket";
 
 export class Bootstrap {
   public socket: Server;
@@ -24,7 +24,7 @@ export class Bootstrap {
   };
 
   public addSockets(): void {
-    this.socket.on("connection", SocketBinder.bind);
+    this.socket.of("/ping").on("connection", PingSocket.bind);
   };
 
   public startup(port: number): void {
