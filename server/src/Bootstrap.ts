@@ -1,6 +1,6 @@
 import http from "node:http"
 import { json } from "express";
-import { Server, Socket } from "socket.io";
+import { Server } from "socket.io";
 
 import type { Express } from "express";
 import { PingRouter } from "@Routers/PingRouter";
