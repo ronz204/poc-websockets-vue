@@ -29,6 +29,7 @@
     "paths": {
       "@Controllers/*": ["src/Presentation/Controllers/*"],
       "@Routers/*": ["src/Presentation/Routers/*"],
+      "@Sockets/*": ["src/Presentation/Sockets/*"],
     },
   }
 }

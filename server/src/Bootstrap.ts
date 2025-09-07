@@ -4,6 +4,7 @@ import { Server, Socket } from "socket.io";
 
 import type { Express } from "express";
 import { PingRouter } from "@Routers/PingRouter";
+import { SocketBinder } from "@Sockets/SocketBinder";
 
 export class Bootstrap {
   public socket: Server;
@@ -23,14 +24,7 @@ export class Bootstrap {
   };
 
   public addSockets(): void {
-    this.socket.on("connection", (socket: Socket) => {
-      console.log("a user connected", socket.id);
-
-
-      socket.on("disconnect", () => {
-        console.log("user disconnected", socket.id);
-      });
-    });
+    this.socket.on("connection", SocketBinder.bind);
   };
 
   public startup(port: number): void {
