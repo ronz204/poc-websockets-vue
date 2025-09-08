@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "start:dev": "vite",
+    "preview": "vite preview",
+    "build": "vue-tsc -b && vite build"
   },
   "dependencies": {
     "vue": "^3.5.18"
