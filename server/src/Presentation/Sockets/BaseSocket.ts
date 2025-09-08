@@ -10,11 +10,11 @@ export abstract class BaseSocket {
 
   protected abstract listening(): void;
 
-  protected emit<T>(event: string, data: T) {
+  protected emit(event: string, data: any) {
     this.socket.emit(event, data);
   };
 
-  protected broadcast<T>(event: string, data: T) {
+  protected broadcast(event: string, data: any) {
     this.socket.broadcast.emit(event, data);
   };
 };
