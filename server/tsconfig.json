@@ -30,6 +30,14 @@
       "@Controllers/*": ["src/Presentation/Controllers/*"],
       "@Routers/*": ["src/Presentation/Routers/*"],
       "@Sockets/*": ["src/Presentation/Sockets/*"],
+
+      "@Repositories/*": ["src/Infrastructure/Repository/*"],
+      "@Database/*": ["src/Infrastructure/Database/*"],
+      "@Commands/*": ["src/Infrastructure/Commands/*"],
+      "@Seeders/*": ["src/Infrastructure/Seeders/*"],
+
+      "@Contracts/*": ["src/Domain/Contracts/*"],
+      "@Models/*": ["src/Domain/Models/*"],
     },
   }
 }
