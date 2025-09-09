@@ -1,0 +1,24 @@
+services:
+  socket-db:
+    image: postgres:16
+    container_name: socket-db
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./server/.env
+    networks:
+      - socket-network
+    volumes:
+      - socket-data:/var/lib/postgres/data
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+
+volumes:
+  socket-data:
+
+networks:
+  socket-network:
+    driver: bridge
+    name: socket-net
