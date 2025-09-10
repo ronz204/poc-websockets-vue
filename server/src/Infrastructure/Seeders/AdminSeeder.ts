@@ -1,5 +1,5 @@
 import { Users } from "@Models/Users";
-import { Seeder } from "@Contracts/Seeder";
+import { Seeder } from "@Interfaces/Seeder";
 import { Drizzle } from "@Database/Drizzle";
 
 export class AdminSeeder extends Seeder {
