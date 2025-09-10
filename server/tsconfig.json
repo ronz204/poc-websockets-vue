@@ -36,7 +36,7 @@
       "@Commands/*": ["src/Infrastructure/Commands/*"],
       "@Seeders/*": ["src/Infrastructure/Seeders/*"],
 
-      "@Contracts/*": ["src/Domain/Contracts/*"],
+      "@Interfaces/*": ["src/Domain/Interfaces/*"],
       "@Models/*": ["src/Domain/Models/*"],
     },
   }
