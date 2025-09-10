@@ -31,12 +31,11 @@
       "@Routers/*": ["src/Presentation/Routers/*"],
       "@Sockets/*": ["src/Presentation/Sockets/*"],
 
-      "@Repositories/*": ["src/Infrastructure/Repository/*"],
+      "@Repos/*": ["src/Infrastructure/Repositories/*"],
       "@Database/*": ["src/Infrastructure/Database/*"],
       "@Commands/*": ["src/Infrastructure/Commands/*"],
       "@Seeders/*": ["src/Infrastructure/Seeders/*"],
 
-      "@Interfaces/*": ["src/Domain/Interfaces/*"],
       "@Models/*": ["src/Domain/Models/*"],
     },
   }

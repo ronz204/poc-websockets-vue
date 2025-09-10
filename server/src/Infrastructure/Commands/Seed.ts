@@ -1,5 +1,5 @@
-import { Seeder } from "@Interfaces/Seeder";
-import { Command } from "@Interfaces/Command";
+import { Command } from "./Command";
+import { Seeder } from "@Seeders/Seeder";
 import { AdminSeeder } from "@Seeders/AdminSeeder";
 
 import { eq } from "drizzle-orm";
