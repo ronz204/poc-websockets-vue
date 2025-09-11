@@ -27,14 +27,18 @@
 
     "baseUrl": ".",
     "paths": {
+      "@Middlewares/*": ["src/Presentation/Middlewares/*"],
       "@Controllers/*": ["src/Presentation/Controllers/*"],
+      
       "@Routers/*": ["src/Presentation/Routers/*"],
       "@Sockets/*": ["src/Presentation/Sockets/*"],
 
-      "@Repos/*": ["src/Infrastructure/Repositories/*"],
+      "@Seeders/*": ["src/Infrastructure/Database/Seeders/*"],
+      "@Repos/*": ["src/Infrastructure/Database/Repos/*"],
+      "@Specs/*": ["src/Infrastructure/Database/Specs/*"],
+
       "@Database/*": ["src/Infrastructure/Database/*"],
       "@Commands/*": ["src/Infrastructure/Commands/*"],
-      "@Seeders/*": ["src/Infrastructure/Seeders/*"],
 
       "@Models/*": ["src/Domain/Models/*"],
     },

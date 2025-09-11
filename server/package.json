@@ -14,7 +14,7 @@
   "scripts": {
     "start:prod": "bun run ./src/Server.ts",
     "start:dev": "bun --hot run ./src/Server.ts",
-    "command:seed": "bun ./src/Infrastructure/Commands/Seed.ts"
+    "command:seed": "bun ./src/Infrastructure/Commands/SeedCommand.ts"
   },
   "type": "module",
   "dependencies": {
