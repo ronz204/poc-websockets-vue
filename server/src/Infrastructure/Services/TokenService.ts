@@ -1,5 +1,5 @@
 import { SignJWT, jwtVerify } from "jose";
-import type { JwtPayload, JwtVerify } from "@Types/TokenTypes";
+import type { JwtPayload, JwtVerify } from "@Types/JoseJwtTypes";
 
 export class TokenService {
   private secret = new TextEncoder()
