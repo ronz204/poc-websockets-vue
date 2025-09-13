@@ -31,7 +31,7 @@
       "@Controllers/*": ["src/Presentation/Controllers/*"],
       
       "@Routers/*": ["src/Presentation/Routers/*"],
-      "@Sockets/*": ["src/Presentation/Sockets/*"],
+      "@Sockets/*": ["src/Application/Sockets/*"],
 
       "@Seeders/*": ["src/Infrastructure/Database/Seeders/*"],
       "@Repos/*": ["src/Infrastructure/Database/Repos/*"],
