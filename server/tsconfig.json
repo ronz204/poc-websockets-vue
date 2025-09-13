@@ -39,8 +39,10 @@
 
       "@Database/*": ["src/Infrastructure/Database/*"],
       "@Commands/*": ["src/Infrastructure/Commands/*"],
+      "@Services/*": ["src/Infrastructure/Services/*"],
 
       "@Models/*": ["src/Domain/Models/*"],
+      "@Types/*": ["src/Domain/Types/*"],
     },
   }
 }
