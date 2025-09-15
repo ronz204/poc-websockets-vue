@@ -4,6 +4,6 @@ export const DemoRoutes: RouteRecordRaw[] = [
   {
     path: "/demo",
     name: "Demo",
-    component: () => import("@App/Demo/Containers/DemoContainer.vue")
+    component: () => import("@App/Demo/DemoPage.vue")
   },
 ];
