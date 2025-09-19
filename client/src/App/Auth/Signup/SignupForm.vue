@@ -4,6 +4,8 @@ import Message from "primevue/message";
 
 import { InputText } from "primevue";
 import { Form } from "@primevue/forms";
+import { FormField } from "@primevue/forms";
+
 import { SignupResolver } from "./SignupResolver";
 import type { FormSubmitEvent } from "@primevue/forms";
 
@@ -16,22 +18,24 @@ const onSubmit = async (data: FormSubmitEvent) => {
   <div class="text-center space-y-3">
     <p class="text-xl font-semibold">Create an Account</p>
 
-    <Form class="border-2 p-2" v-slot="$form"
+    <Form class="border-2 p-2 space-y-3" 
       :resolver="SignupResolver" @submit="onSubmit">
 
-      <div>
-        <InputText name="name" type="text" placeholder="Username" fluid />
-        <Message v-if="$form.name?.invalid" severity="error" variant="simple">
-          {{ $form.name.error.message }}
+      <!-- Name Field -->
+      <FormField v-slot="$field" name="name">
+        <InputText type="text" placeholder="Username" fluid />
+        <Message v-if="$field.invalid" severity="error" variant="simple">
+          {{ $field.error.message }}
         </Message>
-      </div>
+      </FormField>
 
-      <div>
-        <InputText name="password" type="password" placeholder="Password" fluid />
-        <Message v-if="$form.password?.invalid" severity="error" variant="simple">
-          {{ $form.password.error.message }}
+      <!-- Password Field -->
+      <FormField v-slot="$field" name="password">
+        <InputText type="password" placeholder="Password" fluid />
+        <Message v-if="$field.invalid" severity="error" variant="simple">
+          {{ $field.error.message }}
         </Message>
-      </div>
+      </FormField>
 
       <Button type="submit" label="Register" fluid />
     </Form>
