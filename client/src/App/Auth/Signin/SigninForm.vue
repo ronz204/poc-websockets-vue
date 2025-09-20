@@ -16,28 +16,32 @@ const onSubmit = async (data: FormSubmitEvent) => {
 
 <template>
   <div class="text-center space-y-3">
-    <p class="text-xl font-semibold">Login your Account</p>
+    <div class="text-center space-y-2">
+      <h1 class="text-2xl font-bold">Login your Account</h1>
+      <p>Welcome back! Please sign in</p>
+    </div>
 
-    <Form class="border-2 p-2 space-y-3" 
-      :resolver="SigninResolver" @submit="onSubmit">
-
-      <!-- Name Field -->
+    <Form class="space-y-4 p-2" :resolver="SigninResolver" @submit="onSubmit">
       <FormField v-slot="$field" name="name">
-        <InputText type="text" placeholder="Username" fluid />
+        <InputText type="text" placeholder="Username" fluid class="mb-1" />
         <Message v-if="$field.invalid" severity="error" variant="simple">
           {{ $field.error.message }}
         </Message>
       </FormField>
 
-      <!-- Password Field -->
       <FormField v-slot="$field" name="password">
-        <InputText type="password" placeholder="Password" fluid />
+        <InputText type="password" placeholder="Password" fluid class="mb-1" />
         <Message v-if="$field.invalid" severity="error" variant="simple">
           {{ $field.error.message }}
         </Message>
       </FormField>
 
-      <Button type="submit" label="Register" fluid />
+      <Button type="submit" label="Login" fluid />
     </Form>
+
+    <p class="text-sm font-semibold">
+      Don't have an account?
+      <RouterLink to="/signup" class="underline">Register</RouterLink>
+    </p>
   </div>
 </template>
