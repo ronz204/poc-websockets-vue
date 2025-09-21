@@ -18,20 +18,20 @@ const onSubmit = async (data: FormSubmitEvent) => {
   <Form class="space-y-4 p-2" :resolver="SignupResolver" @submit="onSubmit">
 
     <FormField v-slot="$field" name="name">
-      <InputText type="text" placeholder="Username" fluid class="mb-1" />
+      <InputText type="text" placeholder="Username" fluid class="mb-1 h-10" />
       <Message v-if="$field.invalid" severity="error" variant="simple">
         {{ $field.error.message }}
       </Message>
     </FormField>
 
     <FormField v-slot="$field" name="password">
-      <InputText type="password" placeholder="Password" fluid class="mb-1" />
+      <InputText type="password" placeholder="Password" fluid class="mb-1 h-10" />
       <Message v-if="$field.invalid" severity="error" variant="simple">
         {{ $field.error.message }}
       </Message>
     </FormField>
 
-    <Button type="submit" label="Register" fluid />
+    <Button type="submit" label="Register" fluid class="h-10" />
 
   </Form>
 </template>
