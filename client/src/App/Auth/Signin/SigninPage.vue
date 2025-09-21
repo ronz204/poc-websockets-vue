@@ -15,7 +15,7 @@ import SigninForm from "./SigninForm.vue";
 
       <div class="text-center">
         <p class="text-sm font-semibold"> Don't have an account?
-          <RouterLink to="/signup" class="underline">Register</RouterLink>
+          <RouterLink to="/register" class="underline">Register</RouterLink>
         </p>
       </div>
 

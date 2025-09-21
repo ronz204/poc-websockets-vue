@@ -2,12 +2,12 @@ import type { RouteRecordRaw } from "vue-router";
 
 export const AuthRoutes: RouteRecordRaw[] = [
   {
-    path: "/signin",
+    path: "/login",
     name: "AuthSignin",
     component: () => import("@App/Auth/Signin/SigninPage.vue")
   },
   {
-    path: "/signup",
+    path: "/register",
     name: "AuthSignup",
     component: () => import("@App/Auth/Signup/SignupPage.vue")
   }
