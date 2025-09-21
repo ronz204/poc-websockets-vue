@@ -15,33 +15,23 @@ const onSubmit = async (data: FormSubmitEvent) => {
 </script>
 
 <template>
-  <div class="text-center space-y-3">
-    <div class="text-center space-y-2">
-      <h1 class="text-2xl font-bold">Login your Account</h1>
-      <p>Welcome back! Please sign in</p>
-    </div>
+  <Form class="space-y-4 p-2" :resolver="SigninResolver" @submit="onSubmit">
 
-    <Form class="space-y-4 p-2" :resolver="SigninResolver" @submit="onSubmit">
-      <FormField v-slot="$field" name="name">
-        <InputText type="text" placeholder="Username" fluid class="mb-1" />
-        <Message v-if="$field.invalid" severity="error" variant="simple">
-          {{ $field.error.message }}
-        </Message>
-      </FormField>
+    <FormField v-slot="$field" name="name">
+      <InputText type="text" placeholder="Username" fluid class="mb-1" />
+      <Message v-if="$field.invalid" severity="error" variant="simple">
+        {{ $field.error.message }}
+      </Message>
+    </FormField>
 
-      <FormField v-slot="$field" name="password">
-        <InputText type="password" placeholder="Password" fluid class="mb-1" />
-        <Message v-if="$field.invalid" severity="error" variant="simple">
-          {{ $field.error.message }}
-        </Message>
-      </FormField>
+    <FormField v-slot="$field" name="password">
+      <InputText type="password" placeholder="Password" fluid class="mb-1" />
+      <Message v-if="$field.invalid" severity="error" variant="simple">
+        {{ $field.error.message }}
+      </Message>
+    </FormField>
 
-      <Button type="submit" label="Login" fluid />
-    </Form>
-
-    <p class="text-sm font-semibold">
-      Don't have an account?
-      <RouterLink to="/signup" class="underline">Register</RouterLink>
-    </p>
-  </div>
+    <Button type="submit" label="Login" fluid />
+    
+  </Form>
 </template>
